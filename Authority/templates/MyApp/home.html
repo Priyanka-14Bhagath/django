@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% extends 'MyApp/base.html' %}
+{% block body_block %}
+    <div class="jumbotron">
+        <div class="container">
+            <h1>Welcome to CORE BANKING</h1>
+            <h2>Bank Rules: </h2>
+            <ul>
+                <li>Term-1: You should Login One Time Per Week</li>
+                <li>Term-2: You should Login One Time Per Month</li>
+            </ul>
+        </div>
+    </div>
+{% if user.is_authenticated %}
+ <h1 style='color:red'> Hi {{ user.username }}!</h1>
+<p><a href="{% url 'logout' %}">logout</a></p>
+{% else %}
+  <p>You are not logged in</p>
+
+  <a href="{% url 'login' %}">login</a>
+{% endif %}
+{% endblock %}

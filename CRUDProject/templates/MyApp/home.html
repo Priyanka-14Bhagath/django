@@ -1,0 +1,24 @@
+{%load static%}
+<html>
+<head><title>Home</title>
+<a href="//maxcdn.bootstarpcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"></a>
+</head>
+<body>
+<div class="ol-md-offet-3 cd-md-6">
+    <div class="page-header">
+        <h1><a href="{%url 'home'%}" class = "top-menu"> companies list </a></h1>
+    </div>
+    <a href="/create" class="top-menu"> <span class="glyphicon glyphiconplus"></span> Add New pic</a><br>
+    <ul>
+        {%for obj in orglist%}
+        <a href="{{obj.get_absolute_url}}"><h3>{{obj.id}}.{{obj.company_name}}</h3>
+            <a href ="{%url 'update' id=obj.id%}">Update</a>
+            <a href ="{%url 'delete' id=obj.id%}">Delete</a>
+            {%if obj.company_logp%}
+            <img src="{{obj.company_logp.url}}"/>
+        {%endif%}
+        {%endfor%}
+    </ul>
+</div>
+</body>
+</html>

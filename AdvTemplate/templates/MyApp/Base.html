@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+</head>
+<body>
+
+    <nav class = "navbar-default navbar-inverse">
+        <div class = "container">
+            <div class = "navbar-header">
+                <a class = "navbar-band" href = "/">MY SCHOOL</a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="active"><a href = "/Home">Home</a></li>
+                <li><a href = "/Menu">Menu</a></li>
+                <li><a href = "/Admin">Admin</a></li>
+                <li><a href = "/StudentDetails">Student Details</a></li>
+                <li><a href = "/Backup">Backup</a></li>
+                <li><a href = "/View">View</a></li>
+                <li><a href = "/Windows">Windows</a></li>
+                <li><a href = "/Help">Help</a></li>
+            </ul>
+        </div>
+    </nav>
+{% block body_block %}
+{% endblock %}
+{% block content %}
+{% endblock %}
+</body>
+</html>

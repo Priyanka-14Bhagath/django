@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block body_block %}
+
+        <div class="container" align="center">
+            <h1>Login to View Accountb DEtails</h1>
+            <form method="POST">
+                 {{ from.as_p }}
+                {% csrf_token %}
+                <button type="Submit" class= 'btn btn-tag-lg btn-primary'>login</button>
+            </form>
+        </div>
+{% endblock %}

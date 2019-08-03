@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% load staticfiles%}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>state</title>
+   <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+<body>
+        <nav class="navbar navbar-expand navbar-dark bg-dark">
+            <h2 style="color:#fff">one to one relations</h2>
+        </nav>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    {% for i in items %}
+                    <p> {{i.sname}}:{{i.capitalcity.cname}}
+                    </p>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+</body>
+</html>

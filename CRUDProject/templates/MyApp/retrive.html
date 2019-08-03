@@ -1,0 +1,19 @@
+{%load static%}
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>RETRIVE PAGE</title>
+    <link rel="stylesheet" href="//maxcdn.bootstarpcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"></a>
+</head>
+<body>
+<div class="ol-md-offet-3 cd-md-6">
+    <div class="page-header">
+        <h1><a href="{%url 'home'%}" class = "top-menu"> companies list </a> </h1>
+    </div>
+    <h3><u>{{instance.company_name}}details</u></h3>
+    <h4>company id{{instance.id}}</h4><br>
+    <h4>company image:<img src='{{instance.company_logp.url}}'/></h4><br>
+    <h4>company city{{instance.company_city}}</h4><br>
+</div>
+</body>
+</html>
